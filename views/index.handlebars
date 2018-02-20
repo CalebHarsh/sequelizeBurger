@@ -1,0 +1,34 @@
+<div class="jumbotron bg-info text-white text-center px-5 py-2">
+  <h1>Select A Burger</h1>
+  <form class="form-select">
+    <select class="form-control" type="text" id="burger" placeholder="Select a burger...">
+      <option value="0">Select a Burger...</option>
+      <option>Hamburger</option>
+      <option>Cheeseburger</option>
+      <option>Bacon Cheeseburger</option>
+      <option>Hawaiian Burger</option>
+      <option>Chicken Sandwich</option>
+      <option>Krabby Patty</option>
+      <option>Chicken Nuggets</option>
+      <option>Salad</option>
+    </select>
+    <button class="btn btn-primary my-3 px-5" type="submit">Select</button>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="plate select">
+        <img class="img-fluid" src="assets/imgs/none.jpg" alt="Select Burger">
+      </div>
+      <button id="move-plate" class="w-100 btn btn-primary my-3">Move to Plate</button>
+    </div>
+    <div class="col-md-6">
+      <div class="plate eat">
+        <img class="img-fluid" src="assets/imgs/none.jpg" alt="Devour Burger">
+      </div>
+      <button id="devoured" class="w-100 btn btn-primary my-3">Devour</button>
+    </div>
+  </div>
+</div>
