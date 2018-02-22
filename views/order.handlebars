@@ -1,0 +1,81 @@
+<div class="container text-white">
+  <div class="row py-3">
+    <div class="col-md-5">
+      {{#with customer}}
+        <img id="select" class="plate img-fluid" src="{{burger_img}}" alt="Select Burger">
+        <h4 class="text-center" id="name" data-id="{{id}}">{{burger_name}}</h4>
+        {{/with}}
+    </div>
+    <div class="col-md-7 d-flex align-items-center justify-content-center flex-column">
+      <label class="h3">Customer Name</label>
+      <input class="form-control" type="text" id="customer" placeholder="Customer's name">
+      <button id="devoured" class="w-100 btn btn-primary my-3">Devour</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Orders Ready</h2>
+      <table class="table">
+        <tr>
+          <th>Order # </th>
+          <th>Burger </th>
+        </tr>
+        {{#each orders}}
+          {{#unless devoured}}
+          <tr>
+            <td>{{id}}</td>
+            <td><a href="/{{id}}">{{burger_name}}</a></td>
+          </tr>
+          {{/unless}}
+        {{/each}}
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h2>Completed Orders</h2>
+      <table class="table">
+        <tr>
+          <th>Order # </th>
+          <th>Burger </th>
+          <th>Customer Name</th>
+        </tr>
+        {{#each orders}}
+          {{#if devoured}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{burger_name}}</td>
+              {{#with Customer}}
+              <td>{{customer_name}}</td>
+              {{/with}} 
+            </tr>
+          {{/if}}
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron bg-info text-white text-center px-5 py-2 mb-0 align-self-bottom">
+  <form class="form-select">
+    <div class="row">
+      <div class="col-md-8 d-flex align-items-center justify-content-center flex-column">
+        <h1>Select A Burger</h1>
+        <select class="form-control" type="text" id="burger" placeholder="Select a burger...">
+          <option value="0">Select a Burger...</option>
+          <option>Hamburger</option>
+          <option>Cheeseburger</option>
+          <option>Bacon Cheeseburger</option>
+          <option>Hawaiian Burger</option>
+          <option>Chicken Sandwich</option>
+          <option>Krabby Patty</option>
+          <option>Chicken Nuggets</option>
+          <option>Salad</option>
+        </select>
+        <button class="btn btn-primary my-3 px-5" type="submit">Select</button>
+      </div>
+      <div class="col-md-4">
+        <img id="display" class="plate img-fluid" src="assets/imgs/none.jpg" alt="Display">
+      </div>
+  </form>
+  </div>
+</div>

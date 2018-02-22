@@ -22,7 +22,7 @@ var htmlRoutes = require("./routes/html_burger_routes.js")
 app.use(apiRoutes)
 app.use(htmlRoutes)
 //Connect to port
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
   })

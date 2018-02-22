@@ -35,17 +35,18 @@
   <div class="jumbotron bg-info text-center px-5 py-2">
     <h1>Select A Burger</h1>
     <form method="POST">
-      <select class="form-control" type="text" placeholder="Select a burger...">
+      <select id="burger" class="form-control" type="text" placeholder="Select a burger...">
         <option value="0">Select a Burger...</option>
         <option>Hamburger</option>
         <option>Cheeseburger</option>
         <option>Bacon Cheeseburger</option>
-        <option>Hawiian Burger</option>
+        <option>Hawaiian Burger</option>
         <option>Chicken Sandwich</option>
         <option>Krabby Patty</option>
         <option>Chicken Nuggets</option>
         <option>Salad</option>
       </select>
+      <img id="display" src="assets/imgs/none.jpg" alt="">
       <button class="btn btn-primary my-3 px-4" type="submit">Select</button>
     </form>
   </div>
@@ -67,6 +68,8 @@
     </div>
 
   </div>
+
+  <script src="assets/js/burger_script.js"></script>
 </body>
 
 </html>

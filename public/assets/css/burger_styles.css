@@ -2,18 +2,16 @@ body {
   background-image: url("../imgs/navy_blue.png");
 }
 
+table {
+  height: 300px;
+  overflow: scroll;
+}
 .plate {
   width: 100%;
-  height: auto;
+  max-height: 17em;
   border: solid 4px black;
   border-radius: 2em;
 }
-.plate img {
-  border-radius: 1em;
-  width: 100%;
-  height: 100%;
-}
-
 .bg-primary, .btn-primary {
   background-color: grey !important;
   border-color: black !important;
